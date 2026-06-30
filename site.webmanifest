@@ -1,0 +1,17 @@
+{
+  "name": "Ataron / אתרון",
+  "short_name": "Ataron",
+  "description": "Construction project workspace: photos, documents, chat, notes and project history in one place.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1e33",
+  "theme_color": "#0f1e33",
+  "icons": [
+    {
+      "src": "/brand-concept-3/svg/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title>Ataron concept 3 app icon</title>
+  <rect width="1024" height="1024" rx="220" fill="#0F1E33"/>
+  <path d="M180 790V390L438 212v578H180Z" fill="#FFFFFF"/>
+  <path d="M486 146l344 282v362H486V146Z" fill="#FFFFFF"/>
+  <path d="M232 450l142-82v62l-142 82v-62Z" fill="#0F1E33"/>
+  <path d="M232 578l142-82v62l-142 82v-62Z" fill="#0F1E33"/>
+  <path d="M232 706l142-82v62l-142 82v-62Z" fill="#0F1E33"/>
+  <path d="M126 790h760" stroke="#FFFFFF" stroke-width="60" stroke-linecap="round"/>
+  <path d="M586 516h66l126 214h-68l-44-76-52 76h-70l84-130-42-84Z" fill="#FF9E0B"/>
+  <path d="M696 516h70v92c0 68-44 112-112 112h-44v-58h36c30 0 50-20 50-56v-90Z" fill="#FF9E0B"/>
+  <path d="M546 624h72v106h-72V624Z" fill="#FF9E0B"/>
+</svg>

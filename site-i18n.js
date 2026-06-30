@@ -10,6 +10,7 @@
       common: {
         features: "Функции",
         audience: "Для кого",
+        contact: "Связаться",
         launch: "Запуск",
         privacy: "Privacy",
         terms: "Terms",
@@ -52,6 +53,11 @@
         audienceTitle: "Ataron создаётся для реальной стройки",
         audienceText: "Приложение универсально для строительной отрасли: кабланы, прорабы, сантехники, плиточники, архитекторы, заказчики, поставщики и команды на объекте.",
         audienceList: ["👷 Кабланы и прорабы", "🏢 Строительные компании", "📐 Архитекторы и проектировщики", "🧱 Рабочие и бригады", "🤝 Заказчики", "🏪 Поставщики"],
+        contactEyebrow: "Связаться",
+        contactTitle: "Хотите посмотреть Ataron для вашей стройки?",
+        contactText: "Напишите нам, если хотите получить демо, обсудить пилотный проект или первыми попробовать Ataron в строительной компании.",
+        contactLabel: "Почта для связи",
+        contactButton: "Оставить заявку",
         launchEyebrow: "Запуск",
         launchTitle: "Сначала web app, затем Google Play и App Store",
         launchText: "Ataron стартует как PWA на домене ataron.co.il. После стабилизации MVP приложение можно упаковать для Google Play и Apple App Store.",
@@ -104,6 +110,7 @@
       common: {
         features: "Features",
         audience: "For whom",
+        contact: "Contact",
         launch: "Launch",
         privacy: "Privacy",
         terms: "Terms",
@@ -134,6 +141,11 @@
         audienceTitle: "Ataron is built for real construction work",
         audienceText: "The app is universal for the construction industry: contractors, foremen, plumbers, tilers, architects, clients, suppliers and field teams.",
         audienceList: ["👷 Contractors and foremen", "🏢 Construction companies", "📐 Architects and planners", "🧱 Workers and crews", "🤝 Clients", "🏪 Suppliers"],
+        contactEyebrow: "Contact",
+        contactTitle: "Want to see Ataron for your construction work?",
+        contactText: "Write to us if you want a demo, to discuss a pilot project, or to be among the first to try Ataron in a construction company.",
+        contactLabel: "Contact email",
+        contactButton: "Request demo",
         launchEyebrow: "Launch",
         launchTitle: "First web app, then Google Play and App Store",
         launchText: "Ataron starts as a PWA on ataron.co.il. After the MVP stabilizes, it can be packaged for Google Play and Apple App Store.",
@@ -147,6 +159,7 @@
       common: {
         features: "יכולות",
         audience: "למי זה מתאים",
+        contact: "יצירת קשר",
         launch: "השקה",
         privacy: "פרטיות",
         terms: "תנאים",
@@ -177,6 +190,11 @@
         audienceTitle: "Ataron נבנית לעבודה אמיתית בשטח",
         audienceText: "האפליקציה מתאימה לענף הבנייה כולו: קבלנים, מנהלי עבודה, אינסטלטורים, רצפים, אדריכלים, לקוחות, ספקים וצוותי שטח.",
         audienceList: ["👷 קבלנים ומנהלי עבודה", "🏢 חברות בנייה", "📐 אדריכלים ומתכננים", "🧱 עובדים וצוותים", "🤝 לקוחות", "🏪 ספקים"],
+        contactEyebrow: "יצירת קשר",
+        contactTitle: "רוצים לראות את Ataron עבור אתר הבנייה שלכם?",
+        contactText: "כתבו לנו אם תרצו לקבל דמו, לדבר על פיילוט או להיות בין הראשונים שמנסים את Ataron בחברת בנייה.",
+        contactLabel: "אימייל ליצירת קשר",
+        contactButton: "בקשת דמו",
         launchEyebrow: "השקה",
         launchTitle: "קודם web app, אחר כך Google Play ו-App Store",
         launchText: "Ataron מתחילה כ-PWA בדומיין ataron.co.il. אחרי ייצוב ה-MVP אפשר לארוז אותה ל-Google Play ול-Apple App Store.",
@@ -190,6 +208,7 @@
       common: {
         features: "المزايا",
         audience: "لمن",
+        contact: "تواصل",
         launch: "الإطلاق",
         privacy: "الخصوصية",
         terms: "الشروط",
@@ -220,6 +239,11 @@
         audienceTitle: "Ataron مصمم للعمل الحقيقي في مواقع البناء",
         audienceText: "التطبيق مناسب لقطاع البناء كله: المقاولون، المشرفون، السباكون، المبلطون، المهندسون، العملاء، الموردون وفرق العمل.",
         audienceList: ["👷 مقاولون ومشرفون", "🏢 شركات بناء", "📐 مهندسون ومخططون", "🧱 عمال وفرق", "🤝 عملاء", "🏪 موردون"],
+        contactEyebrow: "تواصل",
+        contactTitle: "هل تريد مشاهدة Ataron لموقع البناء الخاص بك؟",
+        contactText: "راسلنا إذا كنت تريد عرضاً تجريبياً أو مناقشة مشروع تجريبي أو تجربة Ataron مبكراً في شركة بناء.",
+        contactLabel: "البريد للتواصل",
+        contactButton: "طلب عرض",
         launchEyebrow: "الإطلاق",
         launchTitle: "أولاً web app ثم Google Play و App Store",
         launchText: "يبدأ Ataron كتطبيق PWA على ataron.co.il. بعد استقرار MVP يمكن تجهيزه لـ Google Play و Apple App Store.",
@@ -376,6 +400,7 @@
     const common = dict.common;
     setAllText('header nav a[href="#features"], header nav a[href="/#features"]', common.features);
     setAllText('header nav a[href="#audience"], header nav a[href="/#audience"]', common.audience);
+    setAllText('header nav a[href="#contact"], header nav a[href="/#contact"]', common.contact);
     setAllText('header nav a[href="#launch"], header nav a[href="/#launch"]', common.launch);
     setAllText('header nav a[href="/privacy"]', common.privacy);
     setAllText('header nav a[href="/terms"]', common.terms);
@@ -418,6 +443,11 @@
     setText("#audience h2", home.audienceTitle);
     setText("#audience p:not(.eyebrow)", home.audienceText);
     setAllText(".audience-list span", home.audienceList);
+    setText("#contact .eyebrow", home.contactEyebrow);
+    setText("#contact h2", home.contactTitle);
+    setText("#contact p:not(.eyebrow)", home.contactText);
+    setText(".contact-box span", home.contactLabel);
+    setText(".contact-box .button", home.contactButton);
     setText("#launch .eyebrow", home.launchEyebrow);
     setText("#launch h2", home.launchTitle);
     setText("#launch p:not(.eyebrow)", home.launchText);

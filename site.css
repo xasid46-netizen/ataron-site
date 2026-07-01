@@ -326,6 +326,11 @@ h1 {
   padding: 20px;
 }
 
+.feature-grid article.feature-highlight {
+  border-color: rgba(245, 158, 11, 0.38);
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.1) 0%, #ffffff 100%);
+}
+
 .feature-grid span {
   width: 44px;
   height: 44px;

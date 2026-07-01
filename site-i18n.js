@@ -58,6 +58,21 @@
         contactText: "Напишите нам, если хотите получить демо, обсудить пилотный проект или первыми попробовать Ataron в строительной компании.",
         contactLabel: "Почта для связи",
         contactButton: "Оставить заявку",
+        formLabels: {
+          name: "Имя",
+          phone: "Телефон",
+          company: "Компания",
+          message: "Сообщение"
+        },
+        formPlaceholders: {
+          name: "Михаил",
+          phone: "+972",
+          company: "Ataron Demo",
+          message: "Хочу посмотреть демо Ataron"
+        },
+        formNote: "После отправки откроется письмо с уже заполненной заявкой.",
+        formSubject: "Заявка на демо Ataron",
+        formStatus: "Готово. Открылось письмо с вашей заявкой.",
         launchEyebrow: "Запуск",
         launchTitle: "Сначала web app, затем Google Play и App Store",
         launchText: "Ataron стартует как PWA на домене ataron.co.il. После стабилизации MVP приложение можно упаковать для Google Play и Apple App Store.",
@@ -146,6 +161,21 @@
         contactText: "Write to us if you want a demo, to discuss a pilot project, or to be among the first to try Ataron in a construction company.",
         contactLabel: "Contact email",
         contactButton: "Request demo",
+        formLabels: {
+          name: "Name",
+          phone: "Phone",
+          company: "Company",
+          message: "Message"
+        },
+        formPlaceholders: {
+          name: "Michael",
+          phone: "+972",
+          company: "Ataron Demo",
+          message: "I want to see an Ataron demo"
+        },
+        formNote: "After submitting, an email with your request will open.",
+        formSubject: "Ataron demo request",
+        formStatus: "Done. An email with your request has opened.",
         launchEyebrow: "Launch",
         launchTitle: "First web app, then Google Play and App Store",
         launchText: "Ataron starts as a PWA on ataron.co.il. After the MVP stabilizes, it can be packaged for Google Play and Apple App Store.",
@@ -195,6 +225,21 @@
         contactText: "כתבו לנו אם תרצו לקבל דמו, לדבר על פיילוט או להיות בין הראשונים שמנסים את Ataron בחברת בנייה.",
         contactLabel: "אימייל ליצירת קשר",
         contactButton: "בקשת דמו",
+        formLabels: {
+          name: "שם",
+          phone: "טלפון",
+          company: "חברה",
+          message: "הודעה"
+        },
+        formPlaceholders: {
+          name: "מיכאל",
+          phone: "+972",
+          company: "Ataron Demo",
+          message: "אני רוצה לראות דמו של Ataron"
+        },
+        formNote: "לאחר השליחה ייפתח אימייל עם הבקשה שלכם.",
+        formSubject: "בקשה לדמו של Ataron",
+        formStatus: "בוצע. נפתח אימייל עם הבקשה שלכם.",
         launchEyebrow: "השקה",
         launchTitle: "קודם web app, אחר כך Google Play ו-App Store",
         launchText: "Ataron מתחילה כ-PWA בדומיין ataron.co.il. אחרי ייצוב ה-MVP אפשר לארוז אותה ל-Google Play ול-Apple App Store.",
@@ -244,6 +289,21 @@
         contactText: "راسلنا إذا كنت تريد عرضاً تجريبياً أو مناقشة مشروع تجريبي أو تجربة Ataron مبكراً في شركة بناء.",
         contactLabel: "البريد للتواصل",
         contactButton: "طلب عرض",
+        formLabels: {
+          name: "الاسم",
+          phone: "الهاتف",
+          company: "الشركة",
+          message: "الرسالة"
+        },
+        formPlaceholders: {
+          name: "ميخائيل",
+          phone: "+972",
+          company: "Ataron Demo",
+          message: "أريد مشاهدة عرض Ataron"
+        },
+        formNote: "بعد الإرسال سيتم فتح بريد إلكتروني يحتوي على طلبك.",
+        formSubject: "طلب عرض Ataron",
+        formStatus: "تم. تم فتح بريد إلكتروني يحتوي على طلبك.",
         launchEyebrow: "الإطلاق",
         launchTitle: "أولاً web app ثم Google Play و App Store",
         launchText: "يبدأ Ataron كتطبيق PWA على ataron.co.il. بعد استقرار MVP يمكن تجهيزه لـ Google Play و Apple App Store.",
@@ -448,6 +508,20 @@
     setText("#contact p:not(.eyebrow)", home.contactText);
     setText(".contact-box span", home.contactLabel);
     setText(".contact-box .button", home.contactButton);
+    setAllText('[data-form-label="name"]', home.formLabels.name);
+    setAllText('[data-form-label="phone"]', home.formLabels.phone);
+    setAllText('[data-form-label="company"]', home.formLabels.company);
+    setAllText('[data-form-label="message"]', home.formLabels.message);
+    const form = $("[data-lead-form]");
+    if (form) {
+      form.dataset.subject = home.formSubject;
+      form.dataset.status = home.formStatus;
+      Object.entries(home.formPlaceholders).forEach(([name, placeholder]) => {
+        const field = form.elements[name];
+        if (field) field.placeholder = placeholder;
+      });
+    }
+    setText("[data-form-note]", home.formNote);
     setText("#launch .eyebrow", home.launchEyebrow);
     setText("#launch h2", home.launchTitle);
     setText("#launch p:not(.eyebrow)", home.launchText);
@@ -455,6 +529,33 @@
       const label = home.launchSteps[index];
       const number = index + 1;
       if (label) step.innerHTML = `<strong>${number}</strong> ${label}`;
+    });
+  }
+
+  function setupLeadForm() {
+    const form = $("[data-lead-form]");
+    if (!form) return;
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const name = data.get("name") || "";
+      const phone = data.get("phone") || "";
+      const company = data.get("company") || "";
+      const message = data.get("message") || "";
+      const subject = form.dataset.subject || "Ataron demo request";
+      const body = [
+        "Ataron demo request",
+        "",
+        `Name: ${name}`,
+        `Phone: ${phone}`,
+        `Company: ${company}`,
+        "",
+        "Message:",
+        message
+      ].join("\n");
+      window.location.href = `mailto:info@ataron.co.il?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const note = $("[data-form-note]");
+      if (note) note.textContent = form.dataset.status || "";
     });
   }
 
@@ -509,4 +610,5 @@
   $$("[data-language-select]").forEach((select) => {
     select.addEventListener("change", (event) => applyLanguage(event.target.value));
   });
+  setupLeadForm();
 })();

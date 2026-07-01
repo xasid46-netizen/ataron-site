@@ -160,7 +160,26 @@
         <div class="contact-box">
           <span>Почта для связи</span>
           <a href="mailto:info@ataron.co.il">info@ataron.co.il</a>
-          <a class="button primary" href="mailto:info@ataron.co.il?subject=Ataron%20demo%20request">Оставить заявку</a>
+          <form class="lead-form" data-lead-form>
+            <label>
+              <span data-form-label="name">Имя</span>
+              <input name="name" autocomplete="name" placeholder="Михаил" required />
+            </label>
+            <label>
+              <span data-form-label="phone">Телефон</span>
+              <input name="phone" autocomplete="tel" inputmode="tel" placeholder="+972" required />
+            </label>
+            <label>
+              <span data-form-label="company">Компания</span>
+              <input name="company" autocomplete="organization" placeholder="Ataron Demo" />
+            </label>
+            <label>
+              <span data-form-label="message">Сообщение</span>
+              <textarea name="message" rows="3" placeholder="Хочу посмотреть демо Ataron"></textarea>
+            </label>
+            <button class="button primary" type="submit" data-form-submit>Оставить заявку</button>
+            <p class="form-note" data-form-note>После отправки откроется письмо с уже заполненной заявкой.</p>
+          </form>
         </div>
       </section>
 
